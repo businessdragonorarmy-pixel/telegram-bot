@@ -4,8 +4,7 @@
   "functions": {
     "api/index.py": {
       "memory": 512,
-      "maxDuration": 30,
-      "runtime": "python3.13"
+      "maxDuration": 30
     }
   },
   "routes": [
