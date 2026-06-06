@@ -7,6 +7,9 @@ django-filter>=24.3,<25
 # Telegram
 python-telegram-bot>=22.0,<23
 
+# setuptools (required by razorpay's pkg_resources)
+setuptools>=79,<80
+
 # Payments
 razorpay>=1.4,<2
 
