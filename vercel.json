@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pip install -r requirements.txt && python telegram_bot_project/manage.py migrate --noinput && python telegram_bot_project/manage.py collectstatic --noinput",
+  "buildCommand": "pip install -r requirements.txt && python manage.py migrate --noinput",
   "outputDirectory": ".",
   "routes": [
     { "src": "/static/(.*)", "dest": "/static/$1" },
