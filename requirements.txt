@@ -23,7 +23,6 @@ requests>=2.32,<3
 openpyxl>=3.1,<4
 whitenoise>=6.8,<7
 gunicorn>=25.0,<26
-serverless-wsgi>=3.0,<4
 
 # Storage (optional — uncomment for S3)
 # boto3>=1.35,<2
