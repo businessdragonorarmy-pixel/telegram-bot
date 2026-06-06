@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload CSV</title>
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Upload Product Keys via CSV</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>
+                <label>Product:</label>
+                <select name="product" required>
+                    {% for product in products %}
+                        <option value="{{ product.id }}">{{ product.name }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p>
+                <label>CSV File (columns: key_value):</label>
+                <input type="file" name="csv_file" accept=".csv" required>
+            </p>
+            <p>
+                <button type="submit">Upload</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

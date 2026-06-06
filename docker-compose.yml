@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python telegram_bot_project/manage.py migrate --noinput &&
+             python telegram_bot_project/manage.py collectstatic --noinput &&
+             gunicorn telegram_bot_project.wsgi:application --bind 0.0.0.0:8000 --workers 2"
