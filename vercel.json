@@ -1,10 +1,11 @@
 {
-  "buildCommand": "pip install -r requirements.txt && python telegram_bot_project/manage.py collectstatic --noinput",
+  "buildCommand": "pip install -r requirements.txt && python telegram_bot_project/manage.py migrate --noinput && python telegram_bot_project/manage.py collectstatic --noinput",
   "outputDirectory": ".",
   "functions": {
     "api/index.py": {
       "memory": 512,
-      "maxDuration": 30
+      "maxDuration": 30,
+      "runtime": "python3.13"
     }
   },
   "routes": [
